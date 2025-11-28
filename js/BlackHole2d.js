@@ -111,7 +111,7 @@ class RayRenderer extends RenderedObject {
     spawnRay(pos, dir) {
         this.rays.push(new Ray(pos, dir, this.blackHole));
     }
-    update(dλ = 20e7) {
+    update(dλ = 10e7) {
         this.rays.forEach(r => r.step(dλ));
         this.rays = this.rays.filter(r => r.alive || r.trail.length > 0);
     }
