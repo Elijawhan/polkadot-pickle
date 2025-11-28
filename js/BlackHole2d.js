@@ -166,8 +166,8 @@ class RayRenderer extends RenderedObject {
     setupRaySpawner() {
         this.app.canvas.addEventListener("click", (e) => {
             // console.log("Click with data: ", e);
-            const clip_x = (e.layerX / this.app.canvas.clientWidth * 2) -1;
-            const clip_y = (e.layerY / this.app.canvas.clientHeight * 2) -1;
+            const clip_x = (e.offsetX / this.app.canvas.clientWidth * 2) -1;
+            const clip_y = (e.offsetY / this.app.canvas.clientHeight * 2) -1;
             // console.log("Translated x, y :", clip_x, clip_y);
             const world_x = clip_x * this.app.worldWidth / this.app.zoom;
             const world_y = -1 * clip_y * this.app.worldHeight / this.app.zoom;
