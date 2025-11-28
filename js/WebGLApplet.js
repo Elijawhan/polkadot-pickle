@@ -9,7 +9,10 @@ class WebGLApplet {
         this.zoom = 1.0;
 
         Object.assign(this.canvas.style, {
-            position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: '#000'
+            position: 'fixed', top: '50%', left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: '133vh', height: '100vh', 
+            background: '#000', imageRendering: 'pixelated'
         });
 
         this.gl = this.canvas.getContext('webgl2');
